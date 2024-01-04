@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM | Chai aur code</title>
+</head>
+
+<body style = "background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    // function addLanguage(langName){
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${langName}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("Python")
+    // addLanguage("Java")
+
+    function optiLanguage(langName) {  //here, we're not traversing the whole tree
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optiLanguage("Java")
+    optiLanguage("GoLang")
+    
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "Raj"
+    secondLang.replaceWith(newLi)
+
+    const replaceLang = document.querySelector("li:first-child")
+    replaceLang.outerHTML = '<li>TypeScript</li>'
+
+
+    //remove
+    const lastLang = document.querySelector("li:nth-child(2)")
+    lastLang.remove()
+
+</script>
+
+</html>
