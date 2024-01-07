@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1> Chai at Home</H1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+
+<script>
+    // setInterval(function() {
+    //     console.log();
+    // }, 1000)
+
+    const interval = (str) => {
+        console.log(str, Date.now());
+    }
+    
+    let set;
+
+    document.querySelector('#Start').addEventListener('click', () =>{
+        console.log("Started");
+        set = setInterval(() => interval('hi'), 1000);
+    })
+
+    document.querySelector('#Stop').addEventListener('click', () =>{
+        console.log("Stopped");
+        clearInterval(set);
+    })
+
+    
+
+
+    
+
+
+</script>
+
+</html>

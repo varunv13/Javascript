@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1> Chai at Home</H1>
+    <button id="Stop">Stop</button>
+</body>
+
+<script>
+    // setTimeout(function(){
+    //     console.log(`Raj`);
+    // }, 2000); // itna time do, mai ek baar mai pura kaam karduga
+
+    // const sayName = function(){console.log(`Raj`);};
+    // setTimeout(sayName, 3000);
+
+    const text = () => {
+        document.querySelector('H1').innerHTML = `Coffee at Home`;
+    };
+    const change = setTimeout(text, 3000);
+
+    document.querySelector('#Stop').addEventListener('click', () => {
+        clearTimeout(change)
+        console.log(`Change will not be done`)
+    });
+    
+</script>
+
+</html>
